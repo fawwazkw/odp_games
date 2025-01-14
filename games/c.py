@@ -10,6 +10,19 @@ def c():
     KELUARAN
     153 adalah bilangan Armstrong
     """
+    # contoh bilangan armstrong (0, 1, 153, 370, 371, dan 407)
+
+    n = 153
+    # rubah angka menjadi string baut hitung jumlah digit
+    angka_str = str(n)
+    jumlah_digit = len(angka_str)
+    # julmah setiap digit yang dipangkatkan dengan jumlah digit
+    jumlah = sum(int(digit_angka) ** jumlah_digit for digit_angka in angka_str)
+    # meriksa apa jumlah sama dengan input
+    if jumlah == n:
+        print(f"{n} adalah bilangan Armstrong")
+    else:
+        print(f"{n} bukan bilangan Armstrong")
 
     # write the code solution here
-    print("Mohon maaf, permainan C belum tersedia!")
+    # print("Mohon maaf, permainan C belum tersedia!")
