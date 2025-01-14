@@ -10,5 +10,17 @@ def b():
     15 16
     """
 
-    # write the code solution here
-    print("Mohon maaf, permainan B belum tersedia!")
+    # Meminta input dari pengguna
+    user_input = input("Masukkan daftar angka yang dipisahkan oleh spasi: ")
+    
+    # Mengubah input string menjadi daftar angka
+    data = list(map(int, user_input.split()))
+
+    # Mengurutkan data
+    data.sort()
+
+    # Mencari pasangan dengan selisih terkecil
+    min_diff_pair = min(zip(data, data[1:]), key=lambda x: x[1] - x[0])
+
+    # Menampilkan pasangan dengan selisih terkecil
+    print("Pasangan angka dengan selisih terkecil:", *min_diff_pair)
