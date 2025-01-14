@@ -12,7 +12,7 @@ def c():
     """
     # contoh bilangan armstrong (0, 1, 153, 370, 371, dan 407)
 
-    n = 153
+    n = int(input("Masukan Angka: "))
     # rubah angka menjadi string baut hitung jumlah digit
     angka_str = str(n)
     jumlah_digit = len(angka_str)
